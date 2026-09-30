@@ -4,67 +4,375 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Website Bán Mỹ Phẩm Online</title>
-
-  <meta name="description"
-        content="Đồ án Website bán mỹ phẩm online - Trần Thị Mỹ Linh">
-
-  <link rel="stylesheet"
-        href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <title>Mỹ Linh Beauty - Mỹ phẩm Online</title>
 
   <style>
-    :root {
-      --theme-color: #e75480;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .app-name-link {
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #e91e63, #ff80ab);
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e91e63;
       font-weight: bold;
+      margin: 0 18px;
     }
 
-    .markdown-section h1 {
-      color: #d63384;
+    nav a:hover {
+      color: #880e4f;
     }
 
-    .markdown-section h2 {
-      color: #e75480;
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: #fce4ec;
+    }
+
+    .hero h2 {
+      color: #c2185b;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e91e63;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .title {
+      text-align: center;
+      color: #c2185b;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+    }
+
+    .product-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      color: #ad1457;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: #e91e63;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+
+    .about {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .student {
+      margin-top: 25px;
+      background: #fce4ec;
+      padding: 20px;
+      border-left: 5px solid #e91e63;
+      border-radius: 8px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #fff0f5;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    footer {
+      background: #880e4f;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+      .hero h2 {
+        font-size: 27px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div id="app">Đang tải Website Mỹ Phẩm Online...</div>
+<header>
+  <h1>🌸 MỸ LINH BEAUTY 🌸</h1>
+  <p>Website bán mỹ phẩm online</p>
+</header>
 
-  <script>
-    window.$docsify = {
-      name: '💄 MỸ PHẨM ONLINE',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      auto2top: true,
-      search: {
-        placeholder: 'Tìm kiếm sản phẩm...',
-        noData: 'Không tìm thấy nội dung!',
-        depth: 3
-      },
-      copyCode: {
-        buttonText: 'Sao chép',
-        errorText: 'Lỗi',
-        successText: 'Đã sao chép'
-      }
-    }
-  </script>
+<nav>
+  <a href="#trangchu">Trang chủ</a>
+  <a href="#sanpham">Sản phẩm</a>
+  <a href="#gioithieu">Giới thiệu</a>
+  <a href="#lienhe">Liên hệ</a>
+</nav>
 
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<section class="hero" id="trangchu">
+  <h2>Đẹp hơn mỗi ngày cùng Mỹ Linh Beauty</h2>
 
-  <!-- Plugin tìm kiếm -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <p>
+    Chuyên cung cấp các sản phẩm mỹ phẩm chăm sóc da,
+    trang điểm và làm đẹp.
+  </p>
 
-  <!-- Plugin sao chép mã -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <a href="#sanpham" class="btn">Xem sản phẩm</a>
+</section>
 
-  <!-- Plugin phân trang -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<section class="container" id="sanpham">
+
+  <h2 class="title">SẢN PHẨM NỔI BẬT</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <div class="product-icon">💄</div>
+      <h3>Son môi</h3>
+      <p>Son môi mềm mịn, màu sắc trẻ trung và lâu trôi.</p>
+      <div class="price">199.000 VNĐ</div>
+      <button class="btn" onclick="muaHang('Son môi')">
+        Mua ngay
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🧴</div>
+      <h3>Kem dưỡng da</h3>
+      <p>Dưỡng ẩm và hỗ trợ chăm sóc làn da hằng ngày.</p>
+      <div class="price">259.000 VNĐ</div>
+      <button class="btn" onclick="muaHang('Kem dưỡng da')">
+        Mua ngay
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">✨</div>
+      <h3>Serum dưỡng da</h3>
+      <p>Serum chăm sóc da, giúp làn da trông tươi sáng.</p>
+      <div class="price">329.000 VNĐ</div>
+      <button class="btn" onclick="muaHang('Serum dưỡng da')">
+        Mua ngay
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🧼</div>
+      <h3>Sữa rửa mặt</h3>
+      <p>Làm sạch da nhẹ nhàng và phù hợp sử dụng hằng ngày.</p>
+      <div class="price">149.000 VNĐ</div>
+      <button class="btn" onclick="muaHang('Sữa rửa mặt')">
+        Mua ngay
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🌞</div>
+      <h3>Kem chống nắng</h3>
+      <p>Hỗ trợ bảo vệ làn da khi hoạt động ngoài trời.</p>
+      <div class="price">219.000 VNĐ</div>
+      <button class="btn" onclick="muaHang('Kem chống nắng')">
+        Mua ngay
+      </button>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🎀</div>
+      <h3>Phấn trang điểm</h3>
+      <p>Giúp lớp trang điểm tự nhiên và mịn màng hơn.</p>
+      <div class="price">289.000 VNĐ</div>
+      <button class="btn" onclick="muaHang('Phấn trang điểm')">
+        Mua ngay
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="container" id="gioithieu">
+
+  <h2 class="title">GIỚI THIỆU WEBSITE</h2>
+
+  <div class="about">
+
+    <p>
+      <strong>Mỹ Linh Beauty</strong> là website bán mỹ phẩm online
+      được xây dựng nhằm giới thiệu các sản phẩm làm đẹp,
+      giúp khách hàng dễ dàng tham khảo sản phẩm và giá bán.
+    </p>
+
+    <br>
+
+    <p>
+      Website được thiết kế với giao diện đơn giản, dễ sử dụng,
+      tương thích với máy tính và điện thoại.
+    </p>
+
+    <div class="student">
+
+      <h3>THÔNG TIN ĐỒ ÁN</h3>
+
+      <p>
+        <strong>Tên đồ án:</strong>
+        Website bán mỹ phẩm online
+      </p>
+
+      <p>
+        <strong>Môn học:</strong>
+        Nhập môn Công nghệ thông tin
+      </p>
+
+      <p>
+        <strong>Sinh viên thực hiện:</strong>
+        Trần Thị Mỹ Linh
+      </p>
+
+      <p>
+        <strong>Mã số sinh viên:</strong>
+        254748020190041
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="container" id="lienhe">
+
+  <h2 class="title">LIÊN HỆ</h2>
+
+  <div class="contact">
+
+    <h3>🌸 Mỹ Linh Beauty 🌸</h3>
+
+    <p>
+      Cảm ơn bạn đã ghé thăm website bán mỹ phẩm online.
+    </p>
+
+    <p>
+      Chúng tôi luôn mong muốn mang đến trải nghiệm mua sắm
+      thuận tiện và đơn giản.
+    </p>
+
+    <br>
+
+    <button class="btn" onclick="lienHe()">
+      Liên hệ ngay
+    </button>
+
+  </div>
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Mỹ Linh Beauty - Website bán mỹ phẩm online
+  </p>
+
+  <p>
+    Đồ án môn Nhập môn Công nghệ thông tin
+  </p>
+
+  <p>
+    Sinh viên: Trần Thị Mỹ Linh - MSSV: 254748020190041
+  </p>
+
+</footer>
+
+<script>
+  function muaHang(sanPham) {
+    alert(
+      "Bạn đã chọn: " + sanPham +
+      "\nCảm ơn bạn đã quan tâm đến sản phẩm!"
+    );
+  }
+
+  function lienHe() {
+    alert(
+      "Cảm ơn bạn đã liên hệ với Mỹ Linh Beauty!"
+    );
+  }
+</script>
 
 </body>
 </html>
